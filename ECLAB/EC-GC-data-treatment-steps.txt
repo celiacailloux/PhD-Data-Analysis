@@ -1,0 +1,23 @@
+How to analyse EC-GC-measurement
+
+EC-analysis
+1) plot PEIS, which is the first file to be generated 
+   [Example - PEIS SINGLE]
+3) Plot j, Vref, VRHE and ZIR over time without GC injections
+   [Example - CA and iR-DROP SINGLE]
+   * plot IV vs time
+   * plot Ru and Ohmic Drop vs time
+   * plot Ru and Ohmic Drop vs potential
+
+GC-analysis
+2) plot raw files with python (with and without the initial 
+with injection, since this will show if any of the gases were
+to begin with [Example - GCPerkin Elmer Peak plotting.py]
+4) Analyse GC spectra - one rst file at a time and create 'XXXX - GC Summary.excel'
+5) Plot j over time with GC injections
+   [Example - CA and FE SINGLE]
+   * plot IV vs time
+   * plot IV vs timestamp
+   * plot FE
+   * plot Tafel plot that compares with Ezra's and Jaramillos data
+

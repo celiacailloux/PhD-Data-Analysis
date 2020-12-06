@@ -1,0 +1,6 @@
+#cleaned up 19A27
+name: acetaldehyde
+formula: C2H4O
+M	=	44.053
+D	=	1.23e-09
+kH	=	0.00288

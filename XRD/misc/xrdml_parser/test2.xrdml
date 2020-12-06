@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xrdMeasurements xmlns="http://www.xrdml.com/XRDMeasurement/1.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xrdml.com/XRDMeasurement/1.3 http://www.xrdml.com/XRDMeasurement/1.3/XRDMeasurement.xsd" status="Completed">
+	<comment>
+		<entry>Configuration=Anton Paar XRK-900, Owner=User-1, Creation date=3/23/2007 13:26:42</entry>
+		<entry>Goniometer=PW3050/60 (Theta/Theta); Minimum step size 2Theta:0.001; Minimum step size Omega:0.001</entry>
+		<entry>Sample stage=Anton Paar XRK-900</entry>
+		<entry>Diffractometer system=XPERT-PRO</entry>
+		<entry>Measurement program=Fe2O3_25-55_NiFilter_tpst1000_sts0_04, Owner=User-1, Creation date=3/23/2018 12:10:15</entry>
+	</comment>
+	<sample type="To be analyzed">
+		<id></id>
+		<name></name>
+		<preparedBy></preparedBy>
+	</sample>
+	<xrdMeasurement measurementType="Scan" status="Completed" sampleMode="Reflection">
+		<comment>
+			<entry>1h</entry>
+		</comment>
+		<usedWavelength intended="K-Alpha 1">
+			<kAlpha1 unit="Angstrom">1.5405980</kAlpha1>
+			<kAlpha2 unit="Angstrom">1.5444260</kAlpha2>
+			<kBeta unit="Angstrom">1.3922500</kBeta>
+			<ratioKAlpha2KAlpha1>0.5000</ratioKAlpha2KAlpha1>
+		</usedWavelength>
+		<incidentBeamPath>
+			<radius unit="mm">240.00</radius>
+			<xRayTube id="1010048" name="PW3373/10 Cu LFF DK174172">
+				<tension unit="kV">45</tension>
+				<current unit="mA">40</current>
+				<anodeMaterial>Cu</anodeMaterial>
+				<focus type="Line">
+					<length unit="mm">12.0</length>
+					<width unit="mm">0.4</width>
+					<takeOffAngle unit="deg">6.0</takeOffAngle>
+				</focus>
+			</xRayTube>
+			<filter id="20010004" name="Nickel">
+				<material>Ni</material>
+				<thickness unit="mm">0.020</thickness>
+			</filter>
+			<sollerSlit id="21010002" name="Soller 0.04 rad.">
+				<opening unit="rad">0.0400</opening>
+			</sollerSlit>
+			<mask id="22080002" name="Inc. Mask Fixed  10 mm (MPD/MRD)">
+				<width unit="mm">6.60</width>
+			</mask>
+			<antiScatterSlit id="22010001" name="Slit Fixed 4°" xsi:type="fixedAntiScatterSlitType">
+				<height unit="mm">5.88</height>
+			</antiScatterSlit>
+			<divergenceSlit id="22010012" name="Prog. Div. Slit" xsi:type="automaticDivergenceSlitType">
+				<distanceToSample unit="mm">140.00</distanceToSample>
+				<irradiatedLength unit="mm">10.0</irradiatedLength>
+				<offset unit="mm">0.00</offset>
+			</divergenceSlit>
+		</incidentBeamPath>
+		<diffractedBeamPath>
+			<radius unit="mm">240.00</radius>
+			<antiScatterSlit id="22110008" name="AS Slit 10.4 mm (PIXcel &amp; Monochromator)" xsi:type="fixedAntiScatterSlitType">
+				<height unit="mm">10.40</height>
+			</antiScatterSlit>
+			<monochromator id="23010033" name="Diffr. Beam Flat 1x graphite for Cu (PIXcel)" hybrid="false">
+				<crystal type="Symmetric" shape="Flat">C</crystal>
+				<numberOfReflections>1</numberOfReflections>
+				<hkl>
+					<h>0</h>
+					<k>0</k>
+					<l>2</l>
+				</hkl>
+			</monochromator>
+			<detector id="7010015" name="PIXcel" xsi:type="rtmsDetectorType">
+				<phd>
+					<lowerLevel unit="%">25.5</lowerLevel>
+					<upperLevel unit="%">70.0</upperLevel>
+				</phd>
+				<mode>Scanning</mode>
+				<activeLength unit="deg">3.347</activeLength>
+			</detector>
+		</diffractedBeamPath>
+		<scan appendNumber="0" mode="Continuous" scanAxis="Gonio" status="Completed">
+			<header>
+				<startTimeStamp>2018-04-04T15:42:54+02:00</startTimeStamp>
+				<endTimeStamp>2018-04-04T16:38:22+02:00</endTimeStamp>
+				<author>
+					<name>Cinf PC RJ</name>
+				</author>
+				<source>
+					<applicationSoftware version="2.2a">X'Pert Data Collector</applicationSoftware>
+					<instrumentControlSoftware version="2.1E">XPERT-PRO</instrumentControlSoftware>
+					<instrumentID>0000000011020749</instrumentID>
+				</source>
+			</header>
+			<dataPoints>
+				<positions axis="2Theta" unit="deg">
+					<startPosition>25.01969542</startPosition>
+					<endPosition>54.99612972</endPosition>
+				</positions>
+				<positions axis="Omega" unit="deg">
+					<startPosition>12.50984771</startPosition>
+					<endPosition>27.49806486</endPosition>
+				</positions>
+				<commonCountingTime unit="seconds">999.600</commonCountingTime>
+				<intensities unit="counts">99 82 97 101 105 87 110 94 76 113 125 102 91 111 97 96 92 115 99 93 106 90 96 131 95 100 106 110 136 117 115 135 126 113 135 109 111 139 107 112 118 126 111 94 112 97 108 84 80 83 113 91 108 101 90 84 97 95 93 80 100 108 77 99 113 111 90 126 79 93 90 93 103 105 94 110 116 107 83 93 109 117 106 92 121 112 98 100 106 96 105 99 94 93 99 78 110 99 92 101 93 97 92 97 113 92 88 92 97 100 93 90 109 89 105 108 71 107 107 123 91 97 97 91 105 113 85 111 106 114 118 109 100 108 109 108 129 108 108 105 117 94 101 120 116 107 117 114 121 97 122 95 113 107 121 112 121 106 104 107 115 115 129 123 133 132 120 148 146 158 145 165 160 163 181 172 179 182 189 201 202 233 259 242 259 277 322 327 450 510 638 777 980 1228 1477 1690 2011 2246 2385 2384 2286 2114 1798 1627 1294 1032 841 674 558 449 385 317 297 271 260 222 241 239 182 212 209 199 201 225 188 244 229 173 185 185 198 183 172 213 202 195 193 198 183 178 171 182 182 184 191 223 218 225 239 280 282 335 414 534 580 761 966 1248 1551 1752 1993 1950 2039 1997 1739 1435 1209 1008 751 613 469 362 348 311 282 234 218 212 201 175 182 171 155 158 120 145 135 141 160 151 132 140 136 147 143 145 120 147 133 128 132 118 126 146 117 114 102 113 100 103 114 106 105 102 105 104 107 98 112 112 120 112 128 113 109 101 122 100 114 131 118 102 112 125 117 117 124 103 110 114 115 123 115 129 104 106 130 132 127 141 137 152 168 145 153 168 147 152 163 128 127 129 147 128 140 136 126 117 99 140 140 114 116 155 152 130 140 135 144 165 131 162 174 181 209 250 260 325 366 473 534 666 716 794 812 812 720 614 618 521 432 353 277 245 214 162 189 177 158 126 115 146 127 142 148 128 107 147 144 148 131 129 154 140 135 120 112 101 117 139 104 125 112 120 120 130 117 102 106 107 110 125 112 97 106 112 123 96 114 82 124 113 122 110 116 123 148 126 140 151 129 161 151 161 141 135 121 129 121 128 120 121 107 146 122 114 116 121 102 134 130 107 115 104 94 101 111 106 100 100 87 120 116 121 111 95 89 118 109 138 112 117 93 101 112 107 109 122 122 125 114 104 107 92 124 123 119 132 107 95 122 121 123 95 106 110 119 124 117 93 104 110 109 110 94 115 102 113 109 101 94 103 104 134 108 100 109 117 120 110 88 127 126 119 114 129 120 123 123 110 107 117 127 134 121 133 131 115 144 145 148 122 114 135 116 120 139 139 135 152 135 123 175 152 139 154 181 144 175 166 158 175 165 166 180 216 197 213 192 238 243 279 342 410 438 571 697 831 1056 1096 1325 1465 1471 1441 1483 1332 1184 1044 907 714 613 520 457 349 313 267 259 260 192 208 183 191 160 155 164 164 144 133 159 165 117 140 133 154 146 126 142 137 149 141 151 127 120 157 157 147 140 136 116 120 143 139 141 132 128 124 140 135 123 123 130 142 134 143 136 132 129 142 136 144 144 154 164 143 131 128 149 148 178 147 134 142 157 155 166 162 153 170 158 174 174 170 168 172 190 186 155 198 218 199 202 204 218 245 257 297 312 340 376 450 575 681 841 982 1229 1433 1643 1774 1893 1976 1881 1855 1654 1596 1279 1128 1002 786 648 509 418 348 342 316 303 249 261 248 219 214 237 213 193 172 200 160 210 168 177 154 170 178</intensities>
+			</dataPoints>
+			<nonAmbientPoints type="Temperature" unit="K">
+				<measurementTimes unit="seconds" deltaTime="1">0 128 129 3328</measurementTimes>
+				<nonAmbientValues>472 472 473 473</nonAmbientValues>
+			</nonAmbientPoints>
+		</scan>
+	</xrdMeasurement>
+</xrdMeasurements>

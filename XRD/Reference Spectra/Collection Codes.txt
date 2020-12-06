@@ -1,0 +1,3 @@
+PdZn 	https://icsd.fiz-karlsruhe.de/display/details.xhtml
+
+Pd 	powderpattern_xy_collCode#64922
