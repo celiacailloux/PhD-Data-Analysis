@@ -17,9 +17,10 @@ import matplotlib as mpl
 #import fit_info
 from pylab import rcParams
 import os
-from OSfunctions import get_application_data_location, join_paths
-from PickleFunctions import save_as_pickle, get_saved_pickle
-from PlottingFunctions import global_savefig
+
+from submodules.file_manage_misc import get_application_data_location, join_paths
+from submodules.file_manage_pickle import save_as_pickle, get_saved_pickle
+from submodules.plot_misc import global_savefig
 
 
 rcParams['figure.figsize'] = 6, 6
