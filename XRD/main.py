@@ -9,12 +9,16 @@ Sample          PdZn28 PdZn(1:1)
 """
 
 import auxiliary.functions as XRD
+import submodules.plot.plotting_functions as pltF
 # ##from xrd_spectra_paths import plt_title_all, plt_title_reduced_all, ref_files_all, files_all, ref_labels_all, labels_all
-# import PlottingFunctions as pltF
+
+#from .PhD_Data_Analysis.submodules.plot.plot import plotting_functions as pltF
+
 # from XRD_SpectraPaths_v2 import files_all, ref_files_all #ref_labels_all, files_all, labels_all
+
 # import matplotlib.pyplot as plt
 # import numpy as np
-# from datetime import date
+from datetime import date
 
 def _ytext(y_min, XRD_plot_fig_shift_add):
     """
