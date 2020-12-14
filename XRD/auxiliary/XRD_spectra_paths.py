@@ -10,6 +10,7 @@ import submodules.file_manage_misc as osfunc
 from submodules.file_manage_misc import create_file_path,  get_user_path
 
 # standard modules 
+import os
 
 #______________________________________________________________________________
 # Experimetnal spectra paths in a dictionary
@@ -21,11 +22,14 @@ from submodules.file_manage_misc import create_file_path,  get_user_path
 ''' ____________________________________________________________ File paths ''' 
 user_path = osfunc.get_user_path()
 XRD_data_dir    = 'OneDrive - Danmarks Tekniske Universitet/PhD/Data/XRD/'
-XRD_ref_dir     = 'OneDrive - Danmarks Tekniske Universitet/Modules/XRD/XRD Reference Spectra/'
+# XRD_ref_dir     = 'OneDrive - Danmarks Tekniske Universitet/Modules/XRD/XRD Reference Spectra/'
+XRD_ref_dir     = 'Google Drev/Programmering/Python/Projects/PhD Data Analysis/XRD/ICSD_reference_spectra/'
+pardir_path     = os.path.abspath(os.path.join(os.getcwd(), os.pardir))
 
 " add exp "
 # "Experimental files. Below are the file paths for the experimental files which"
 # "are the put into a dictionary (files_all) that contains the file path and label."
+example         = os.path.join(pardir_path, 'XRD/example/XRD pattern dir/XRD pattern.csv')
 Pd              = osfunc.create_file_path(user_path, XRD_data_dir,'20191010 GIXRD Pd wobbled\Pd thin film GIXRD 20to90deg Omega0,5deg 10HrScan.csv')
 PdZn_873K       = osfunc.create_file_path(user_path, XRD_data_dir,'20191016 Pdzn 873K/GIXRD 20to90deg Omega0,5deg 10HrScan_1.csv')
 PdZn_523K       = osfunc.create_file_path(user_path, XRD_data_dir, '20191024 PdZn 523K/PdZn 523K GIXRD 20to90deg Omega0,5deg 10HrScan_1.csv')
@@ -58,34 +62,35 @@ PdZn28_long_scan= create_file_path(user_path, XRD_data_dir, r'20200609 PdZn28 Pd
 
 " add exp "
 # Contains key, file_path, label
-files_all = {'Pd': [Pd, 'Pd/Si (100 nm)'],
-                    'PdZn_873K'         : [PdZn_873K,       'PdZn (873 K)'],
-                    'PdZn_523K'         : [PdZn_523K,       'PdZn (523 K)'],
-                    'PdZn_623K'         : [PdZn_623K,       'PdZn (623 K)'],
-                    'PdZn_623K_NF'      : [PdZn_623K_NF,    'PdZn (623 K, NF)'],
-                    'PdZn_623K_NF_SD'   : [PdZn_623K_NF_SD, 'PdZn (623 K, NF, SD)'],
-                    'PdZn_723K_NF_SD'   : [PdZn_723K_NF_SD, 'PdZn (723 K, NF, SD)'],
-                    'PdZn_673K_NF'      : [PdZn_673K_NF,    'PdZn (673 K, NF)'],
-                    'PdZn_648K_NF'      : [PdZn_648K_NF,    'PdZn (648 K, NF)'],
-                    'Pd_noZn_623K_NF'   : [Pd_noZn_623K_NF, 'Pd/Si(100) (623K)'],
-                    'Si100_273K'        : [Si100_273K,      'Si(100)'],
-                    'PdZn13_623K'       : [PdZn13_623K,     'PdZn/TiO$_2$ (623 K)'],
-                    'Pd_SP12_273K'      : [Pd_SP12_273K,    'Pd thin film'],#'Pd/TiO2/Ti RT (SP12)'],#'Pd/TiO2/Ti (273 K)'],
-                    'SP14_ZnO_273K'     : [SP14_ZnO_273K,        'ZnO/TiO2 RT (SP14)'],#'ZnO/TiO2 (273 K)'],
-                    'PdZnO_273K'        : [PdZnO_273K,      'Pd/ZnO/TiO2 RT (SP15)'],#'PdZnO (273 K)'],
-                    'PdZn14_623K'       : [PdZn14_623K,     'Pd/ZnO/TiO2 350C (PdZn14)'],#'PdZnO (623 K)']}
-                    'PdZn15_723K'       : [PdZn15_723K,     'Pd/ZnO/TiO2 450C (PdZn15)'],
-                    'PdZn16_773K'       : [PdZn16_773K,     'ZnO/Pd/TiO2/Ti (PdZn16)'],
-                    'PdZn17_623K'       : [PdZn17_623K,     'ZnO/Pd/TiO2/Ti (PdZn17)'],
-                    'ZnO_SP20_RT'       : [ZnO_SP20_RT,     'ZnO/Pd/TiO2/Ti RT (SP20)'],
-                    'PdZn18_623K'       : [PdZn18_623K,     'PdZn CVD 350 (PdZn18)'],
-                    'PdZn22_450C'       : [PdZn22_450C,     'PdZn(1:2) (PdZn22)'],
-                    'PdZn23_450C'       : [PdZn23_450C,     'PdZn(2:1) (PdZn23)'],
-                    'PdZn25_2x450C'     : [PdZn25_2x450C,   'PdZn(1:2) (PdZn25)'],
-                    'PdZn26_450C'       : [PdZn26_450C,     'PdZn(1:1) (PdZn26)'],
-                    'PdZn20_Al2O3'      : [PdZn20_Al2O3,    'PdZn(1:2) (SP32,PdZn20)'],
-                    'PdZn28_450C'       : [PdZn28_450C,     'PdZn(1:1) (PdZn28)'],
-                    'PdZn28_long_scan'  : [PdZn28_long_scan,'PdZn(1:1)']}#'PdZn(1:1) (PdZn28)']}
+files_all = {'example'           : [example,         '<insert pattern label>'],
+             'Pd'                : [Pd,              'Pd/Si (100 nm)'],
+             'PdZn_873K'         : [PdZn_873K,       'PdZn (873 K)'],
+             'PdZn_523K'         : [PdZn_523K,       'PdZn (523 K)'],
+             'PdZn_623K'         : [PdZn_623K,       'PdZn (623 K)'],
+             'PdZn_623K_NF'      : [PdZn_623K_NF,    'PdZn (623 K, NF)'],
+             'PdZn_623K_NF_SD'   : [PdZn_623K_NF_SD, 'PdZn (623 K, NF, SD)'],
+             'PdpZn_723K_NF_SD'   : [PdZn_723K_NF_SD, 'PdZn (723 K, NF, SD)'],
+             'PdZn_673K_NF'      : [PdZn_673K_NF,    'PdZn (673 K, NF)'],
+             'PdZn_648K_NF'      : [PdZn_648K_NF,    'PdZn (648 K, NF)'],
+             'Pd_noZn_623K_NF'   : [Pd_noZn_623K_NF, 'Pd/Si(100) (623K)'],
+             'Si100_273K'        : [Si100_273K,      'Si(100)'],
+             'PdZn13_623K'       : [PdZn13_623K,     'PdZn/TiO$_2$ (623 K)'],
+             'Pd_SP12_273K'      : [Pd_SP12_273K,    'Pd thin film'],#'Pd/TiO2/Ti RT (SP12)'],#'Pd/TiO2/Ti (273 K)'],
+             'SP14_ZnO_273K'     : [SP14_ZnO_273K,   'ZnO/TiO2 RT (SP14)'],#'ZnO/TiO2 (273 K)'],
+             'PdZnO_273K'        : [PdZnO_273K,      'Pd/ZnO/TiO2 RT (SP15)'],#'PdZnO (273 K)'],
+             'PdZn14_623K'       : [PdZn14_623K,     'Pd/ZnO/TiO2 350C (PdZn14)'],#'PdZnO (623 K)']}
+             'PdZn15_723K'       : [PdZn15_723K,     'Pd/ZnO/TiO2 450C (PdZn15)'],
+             'PdZn16_773K'       : [PdZn16_773K,     'ZnO/Pd/TiO2/Ti (PdZn16)'],
+             'PdZn17_623K'       : [PdZn17_623K,     'ZnO/Pd/TiO2/Ti (PdZn17)'],
+             'ZnO_SP20_RT'       : [ZnO_SP20_RT,     'ZnO/Pd/TiO2/Ti RT (SP20)'],
+             'PdZn18_623K'       : [PdZn18_623K,     'PdZn CVD 350 (PdZn18)'],
+             'PdZn22_450C'       : [PdZn22_450C,     'PdZn(1:2) (PdZn22)'],
+             'PdZn23_450C'       : [PdZn23_450C,     'PdZn(2:1) (PdZn23)'],
+             'PdZn25_2x450C'     : [PdZn25_2x450C,   'PdZn(1:2) (PdZn25)'],
+             'PdZn26_450C'       : [PdZn26_450C,     'PdZn(1:1) (PdZn26)'],
+             'PdZn20_Al2O3'      : [PdZn20_Al2O3,    'PdZn(1:2) (SP32,PdZn20)'],
+             'PdZn28_450C'       : [PdZn28_450C,     'PdZn(1:1) (PdZn28)'],
+             'PdZn28_long_scan'  : [PdZn28_long_scan,'PdZn(1:1)']}#'PdZn(1:1) (PdZn28)']}
 
 
 ''' ____________ Reference files ___________________________________________''' 
