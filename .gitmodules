@@ -1,6 +1,0 @@
-[submodule "submodules"]
-	path = submodules
-	url = https://github.com/celiacailloux/submodules
-[submodule "XRD/submodules"]
-	path = XRD/submodules
-	url = https://github.com/celiacailloux/submodules.git
