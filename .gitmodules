@@ -1,0 +1,3 @@
+[submodule "XRD/submodules"]
+	path = XRD/submodules
+	url = https://github.com/celiacailloux/submodules.git
