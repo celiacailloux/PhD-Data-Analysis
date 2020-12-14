@@ -9,7 +9,7 @@ Sample          PdZn28 PdZn(1:1)
 """
 
 import auxiliary.functions as XRD
-import submodules.plot.plotting_functions as pltF
+import submodules.plot_misc as pltF
 # ##from xrd_spectra_paths import plt_title_all, plt_title_reduced_all, ref_files_all, files_all, ref_labels_all, labels_all
 
 #from .PhD_Data_Analysis.submodules.plot.plot import plotting_functions as pltF
