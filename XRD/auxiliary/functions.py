@@ -8,7 +8,30 @@ There are two parts of this script:
 import numpy as np
 import re
 import pandas as pd
+from datetime import date
 
+def _ytext(y_min, XRD_plot_fig_shift_add):
+    """
+    This function determines the y-coordinate for the label text
+    inserted in the XRD plots.
+    """
+    return y_min-XRD_plot_fig_shift_add*0.05 
+    
+def convert_x_range_to_str(x1_lim, x2_lim):
+    
+    " Converts XRD x1_lim and x2_lim into a nice string to attach to "
+    " the file name of the plot. "
+
+    return ', x_range.' + str(x1_lim) + '.' + str(x2_lim) + ','
+
+def get_plot_title(wanted_exps, wanted_refs):
+    
+    date_str = str(date.today())
+    wanted_exps_str = ' ' + ' '.join([str(exp.split('_', 1)[0]) for exp in wanted_exps])
+    wanted_ref_str = ', ref. ' + ' '.join([str(exp) for exp in wanted_refs])
+    #', Pd RT, ZnO(TiO2), Si100'
+    print(wanted_exps_str)
+    return date_str + wanted_exps_str + wanted_ref_str
 
 #wave_length of source
 def read_xrdml_wavelength(path):
