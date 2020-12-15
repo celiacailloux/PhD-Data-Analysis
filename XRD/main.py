@@ -3,7 +3,11 @@
 """
 @author         celiacailloux              
 
-Main scrip to plot XRD patterns.
+Main script to plot XRD patterns.
+
+This script will read an csv file of an XRD pattern and plot it. In addition, 
+reference pattern can be added to the plot. Finally, specific peak centers can
+be inserted. 
 
 """
 
@@ -21,18 +25,9 @@ import numpy as np
 
 # saves plotted plot WITHOUT showing showing it in the GUI
 savefigures         = True
-reduced_spectrum    = False     # mean reducing the x-range (i.e. 2theta range)
+reduced_spectrum    = True     # mean reducing the x-range (i.e. 2theta range)
 x1_lim, x2_lim      = 30, 80
 x_min_loc, y_min_loc= 5,4 
-
-'''
-# not used anymore 
-plt_title           = plt_title_all[catalyst]
-plt_title_reduced   = plt_title_reduced_all[catalyst]
-# ## Experimental files 
-# ##All experimental files are in XRD_SpectraPaths 
-# #exps = [files_all[catalyst]] 
-'''
 
 
 ' Choose data --------------------------------------------------------------- '
@@ -122,7 +117,11 @@ for exp,n in zip(exps,range(0,len(exps))):
 for ref,m in zip(refs,range(0,len(refs))):
         spectrum = XRD.read_ref_spectrum(ref[0])
         y = np.subtract(spectrum[1].mul(scale_ref_spec),fig_shift)
-        ax.plot(spectrum[0], y,label=ref[1], color = color((n+m+1)/N), linewidth = 2)
+        ax.plot(spectrum[0], 
+                y,
+                label=ref[1], 
+                color = color((n+m+1)/N), 
+                linewidth = 2)
         y_text = y.min()-text_shift
         pltF.global_text(ax, 
                           text=ref[1], 
@@ -130,8 +129,7 @@ for ref,m in zip(refs,range(0,len(refs))):
                           x = x_text, 
                           y = y_text, 
                           color =  color((n+m+1)/N))
-       
-        #ax.plot(spectrum[0],np.subtract(spectrum[1].mul(0.2),fig_shift),label=ref[1], color = color(6/N))
+        
         fig_shift += fig_shift_add
 
 if bool(peak_centers):
@@ -157,6 +155,7 @@ if reduced_spectrum:
     if savefigures:
         pltF.global_savefig(fig, plt_title = title, 
                             addcomment = comment + x_range_str)
+        plt.close('all')
     else:
         plt.show()
 else:
@@ -164,17 +163,9 @@ else:
     ax.set_ylim(top = 1.5, bottom = -fig_shift+fig_shift_add/2)
     if savefigures:
         pltF.global_savefig(fig, plt_title = title, addcomment = comment)
+        plt.close()
     else:
-        plt.show()
-    # if savefigures:
-    #     pltF.global_savefig(fig, plt_title = title + '_label', addcomment = comment)
-    # plt.tight_layout()
- 
-#     # ________ plot experimental spectra     
-#         --> y_text = _ytext(y.min(),fig_shift_add)
-        
-#     # ________plot reference spectra        
-#         y_text = XRD._ytext(y.min(),fig_shift_add)
+        plt.show('all')
          
 
 
