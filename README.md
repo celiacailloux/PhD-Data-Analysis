@@ -1,6 +1,6 @@
 # PhD-Data-Analysis
 
-PhD-Data-Analysis is a Python library for visualtion of dealing with word pluralization.
+PhD-Data-Analysis is a Python library for visualisation of data related to electrochestry and surface science.
 
 ## Installation
 
