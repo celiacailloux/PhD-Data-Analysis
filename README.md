@@ -15,13 +15,9 @@ Hence, the idea was to use Python to automatically visualize data to help me **g
 
 ## Usage
 
-Please take a look at *readme.md* in each instrument-type-folder for an introduction to how best to use the library
+Please take a look at *readme.md* in each instrument-type-folder for an introduction to how best to use the instrument libraries
 
 - [ ] add relative links to the individual readme.md files
-
-## Automation process workflow
-
-[Automation of data analysis and visualization workflow](Data_process_workflow.png) 
 
 ## Folder Structure
 
@@ -39,6 +35,13 @@ PhD-Data-Analysis is split into folders named after each type of instrument (e.g
   - *submodules*
   - misc
 - ...
+
+## Automation process workflow
+
+A general overview of the automation of data analysis and visualization workflow for all instrument libraries.
+
+[Data Process Workflow](Data_process_workflow.png) 
+
 
 ## Packages
 
