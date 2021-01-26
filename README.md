@@ -4,7 +4,7 @@ PhD-Data-Analysis is a Python library containing objects and modules to read, an
 
 ## Purpose
 
-As an physics experimentalist who works with and is in charge of many instruments being able to **automate data analysis** is a time saver like no other and reduces any human errors. Moreover, the software that is included your instrument is often cumbersome (because it is capable of many-facetted analysis) and requires a sequence of methods to **prep your data** for your specific purpose. 
+As an physics experimentalist who works with and is in charge of many instruments being able to **automate data analysis** is a time saver like no other and reduces human errors. Moreover, the software that is usually included along your instrument is often cumbersome (because it is capable of many-facetted analysis) and requires a sequence of methods to **prep** and **analyse your data** for your specific purpose. 
 
 Hence, the idea was to use Python to automatically visualize data to help me **get an overview** and **find patterns** to help me progress my research. Especially when calibrating and getting-to-know your instruments, visualizing your results is very helpful.  
 
@@ -12,7 +12,7 @@ Hence, the idea was to use Python to automatically visualize data to help me **g
 
 The subject of my PhD was *Electrochemical reduction of CO2 to fuels and chemicals* (aka converting gaseous CO2 into ethanol for your car to run on or ethylene to produce plastic in a carbonneutral way). My task was to develop a new catalyst to make the conversion effective, energitetically and selectively.
 
-### Electrochemistry**
+### Electrochemistry
 
 **Instrument Type | File Type | Link to software/hardware**
 - EC-Lab | csv | [About EC-Lab](https://snowhouse.ca/pdf/Biologic%20-%20Ec-Lab.pdf)
@@ -29,14 +29,14 @@ The subject of my PhD was *Electrochemical reduction of CO2 to fuels and chemica
 
 ## Folder Structure
 
-PhD-Data-Analysis is split into folders named after each type of instrument (e.g. XRD). Each instrument-folder then contains a main script (*main.py*) and subfolders for figures, modules and other. E.g. *
+PhD-Data-Analysis is split into folders named after each type of instrument (e.g. XRD). Each instrument-folder then contains a main script (*main.py*) and subfolders for figures, modules and other. E.g.
 - instrument_type_1
   - main.py
   - figures
   - example
   - *submodules*
   - misc
--instrument_type_2
+- instrument_type_2
   - main.py
   - figures
   - example
@@ -46,7 +46,7 @@ PhD-Data-Analysis is split into folders named after each type of instrument (e.g
 
 # Usage
 
-Please take a look at *readme.md* in each instrument-folder to (e.g. *XRD*) for an introduction to how best to use the library
+Please take a look at *readme.md* in each instrument-type-folder for an introduction to how best to use the library
 
 - [ ] add relative links to the individual readme.md files
 
