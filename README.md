@@ -11,7 +11,8 @@ Hence, the idea was to use Python to automatically visualize data to help me **g
 ## Instrument Software and File Type
 
 The subject of my PhD was 
-> Electrochemical reduction of CO2 to fuels and chemicals* 
+> Electrochemical reduction of CO2 to fuels and chemicals
+
 (aka converting gaseous CO2 into ethanol for your car to run on or ethylene to produce plastic in a carbonneutral way). My task was to develop a new catalyst to make the conversion effective, energitetically and selectively.
 
 ### Electrochemistry
