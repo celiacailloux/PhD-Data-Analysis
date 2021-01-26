@@ -44,7 +44,7 @@ PhD-Data-Analysis is split into folders named after each type of instrument (e.g
   - misc
 - ...
 
-# Usage
+## Usage
 
 Please take a look at *readme.md* in each instrument-type-folder for an introduction to how best to use the library
 
